@@ -1,0 +1,173 @@
+@import "./reset.css";
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  width: auto;
+  grid-template-rows: 11% 22% 14% 51%;
+  grid-auto-columns: 1fr;
+  background-color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 4.5px solid #00c6ac;
+}
+
+.header {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-top: 1.5rem;
+}
+
+.xButton {
+  position: absolute;
+  left: 8%;
+}
+
+.playScreen {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  align-items: center;
+}
+
+.playScreen__musicPhotoBox {
+  display: flex;
+  width: 14rem;
+  height: 14rem;
+  background-color: #ffbc12;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  border: 2.5px solid black;
+  border-radius: 16px;
+}
+
+.playScreen__musicInfo {
+  display: flex;
+  height: 57%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.playScreen__musicTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+.playScreen__musicArtist {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 5%;
+}
+
+.controleButtons {
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 800;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.controleButtons__playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+  height: 7rem;
+  border: 2.5px solid black;
+  border-radius: 15px;
+  box-shadow: 0 3px 0 0;
+}
+
+.controleButtons__heartButton,
+.controleButtons__plusButton {
+  display: flex;
+  width: 7rem;
+  height: 7rem;
+  border: 2.5px solid black;
+  font-size: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 3px 0 0;
+}
+
+.musicList {
+  display: grid;
+  grid-template-rows: repeat(4, 25%);
+}
+
+.musicBox {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+
+.musicBox__Photo {
+  height: 6rem;
+  width: 6rem;
+  justify-self: flex-end;
+  border: 2.5px solid black;
+  border-radius: 10px;
+}
+
+.musicBox:first-child .musicBox__Photo {
+  background-color: #f85a2a;
+}
+
+.musicBox:nth-child(2) .musicBox__Photo {
+  background-color: #fe89bc;
+}
+
+.musicBox:nth-child(3) .musicBox__Photo {
+  background-color: #1947e4;
+}
+
+.musicBox:nth-child(4) .musicBox__Photo {
+  background-color: #00c6ac;
+}
+
+.musicBox__Info {
+  display: flex;
+  flex-direction: column;
+  height: 55%;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+}
+
+.musicBox__Title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.musicBox__Artist {
+  font-size: 2rem;
+}
+@media (min-width: 667px) {
+  body {
+    height: 200vh;
+  }
+  .wraper {
+    height: 100%;
+  }
+}
+@media (width < 375px) {
+  body {
+    width: 122%;
+    height: 123.5vh;
+  }
+}
